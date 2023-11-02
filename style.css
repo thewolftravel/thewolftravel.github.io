@@ -1,0 +1,33 @@
+/* StyleSheet */
+
+#background {
+  background-image: url("images/p-b.jpeg");
+  background-size: cover;
+}
+
+a {
+  text-shadow: 0 0 0 20px whitesmoke;
+}
+
+.full-page {
+  height: 85vh;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  #background {
+    background-image: url("images/yellowish.jpeg");
+    background-size: cover;
+  }
+}
+
+@media (min-width: 901px) {
+  #background {
+    background-image: url("images/horizontal-red.jpg");
+    background-size: cover;
+  }
+
+  #text-front-page {
+    margin-top: 30%;
+    /* animate to move to center  */
+  }
+}
