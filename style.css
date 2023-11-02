@@ -1,10 +1,5 @@
 /* StyleSheet */
 
-#background {
-  background-image: url("images/p-b.jpeg");
-  background-size: cover;
-}
-
 a {
   color: #d63384;
   font-family: monospace;
@@ -13,21 +8,73 @@ a {
   font-weight: 600;
 }
 
+/* hover */
 a:hover {
-  text-shadow: -1px -1px 2px whitesmoke;
+  color: #337ad6;
+  opacity: 0.8;
 }
 
+h1:hover {
+  cursor: default;
+  opacity: 0.9;
+}
+
+p:hover {
+  cursor: default;
+}
+
+/* Animation */
+@keyframes animatedBackground {
+  from {
+    background-position: 0 20%;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+#background {
+  background-image: url("images/p-b.jpeg");
+  background-size: cover;
+  background-position: 150px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 15s linear infinite alternate;
+}
+
+h1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/*  framing  */
 .full-page {
   height: 85vh;
 }
-
+ /* responsiviness - from mobile to tablet to computer */
+/* Tablet screens */
 @media (min-width: 600px) and (max-width: 900px) {
   #background {
     background-image: url("images/yellowish.jpeg");
     background-size: cover;
   }
 }
-
+/* Computer screens  */
 @media (min-width: 901px) {
   #background {
     background-image: url("images/horizontal-red.jpg");
