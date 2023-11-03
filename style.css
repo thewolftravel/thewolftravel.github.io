@@ -24,6 +24,7 @@ p:hover {
 }
 
 /* Animation */
+/* moving background */
 @keyframes animatedBackground {
   from {
     background-position: 0 20%;
@@ -40,7 +41,7 @@ p:hover {
   background-repeat: repeat-x;
   animation: animatedBackground 15s linear infinite alternate;
 }
-
+/* silde in */
 h1 {
   animation-duration: 3s;
   animation-name: slidein;
@@ -66,7 +67,14 @@ p {
 .full-page {
   height: 85vh;
 }
- /* responsiviness - from mobile to tablet to computer */
+
+.top-section {
+  position: sticky;
+  top: 0;
+  translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
+}
+
+/* responsiviness - from mobile to tablet to computer */
 /* Tablet screens */
 @media (min-width: 600px) and (max-width: 900px) {
   #background {
